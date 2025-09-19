@@ -1,0 +1,74 @@
+xdata=[2,3,5,8];
+ 
+Otsu=	[83.42	78.73	71.89	56.67	87.85	81.2	85.39	86.6];
+Kapur=[48.0,60.7,52.9,46.4,43.3,42.3,58.7,54.4];
+
+ bpcombine1=PCA;bpcombine2=DWT;bpcombine3=GuidedFilter;bpcombine4=Proposedmethod;
+bpcombined = [bpcombine1(:), bpcombine2(:), bpcombine3(:),bpcombine4(:)];
+hb = bar(xdata, bpcombined, 'grouped')
+xlabel('Data set number');ylabel('Metric Value');
+title('Average Pixel Intensity');legend('PCA','DWT','GuidedFilter','Proposed Method');
+% MLE	=[38.4	37.9	40.9	39.3	39.27	40.73	40.88	41];
+%  GuidedFilter=[39.62	38.7	42.02	39.19	36.76	41.84	40.49	39.85];
+% DWTmax	=[38.05	37.4	40.49	39.17	39.11	40.52	40.2746	40.38];
+% NSCT	=[38.41	38.46	41.15	39.32	39.9	41.33	39.99	40.21];
+% Proposedmethod=[	39.7	39.14	42.12	39.5	40.86	42.2	42.2	42.46];
+% figure(2);
+%  bpcombine1=MLE;bpcombine2=GuidedFilter;bpcombine3=DWTmax;bpcombine4=NSCT;bpcombine5=Proposedmethod;
+% bpcombined = [bpcombine1(:), bpcombine2(:), bpcombine3(:),bpcombine4(:),bpcombine5(:)];
+% hb = bar(xdata, bpcombined, 'grouped')
+% xlabel('Data set number');ylabel('Metric Value');
+% title('PSNR');legend('MLE','GuidedFilter','DWTmax','NSCT','Proposed Method');
+% MLE	=[0.5574	0.5196	0.52	0.7154	0.4637	0.5396	0.4348	0.4974];
+%  GuidedFilter=[ 0.6038	0.5502	0.623	0.7862	0.6113	0.6478	0.5678	0.5483];
+% DWTmax=[0.5194	0.4909	0.5678	0.7599	0.4992	0.5656	0.4245	0.4684];
+% NSCT	=[0.7434	0.7199	0.7772	0.7641	0.6723	0.7696	0.615	0.7331];
+% Proposedmethod=[0.763	0.7723	0.8373	0.8665	0.7566	0.8023	0.6425	0.7425];
+% figure(3);
+%  bpcombine1=MLE;bpcombine2=GuidedFilter;bpcombine3=DWTmax;bpcombine4=NSCT;bpcombine5=Proposedmethod;
+% bpcombined = [bpcombine1(:), bpcombine2(:), bpcombine3(:),bpcombine4(:),bpcombine5(:)];
+% hb = bar(xdata, bpcombined, 'grouped')
+% xlabel('Data set number');ylabel('Metric Value');
+% title('QABF');
+% legend('MLE','GuidedFilter','DWTmax','NSCT','Proposed Method');
+% 
+% MLE=[	0.995	0.9942	0.9974	0.9932	0.9944	0.9969	0.9942	0.994];
+%  GuidedFilter=[	0.9895	0.9907	0.991	0.9934	0.9814	0.9883	0.9834	0.9874];
+% DWTmax=[0.9944	0.9934	0.9971	0.993	0.9939	0.9966	0.9938	0.9936];
+% NSCT	=[0.995	0.9945	0.9975	0.9938	0.9948	0.9971	0.9947	0.9942];
+% Proposedmethod=[	0.9951	0.9945	0.9975	0.9958	0.9949	0.9971	0.9954	0.9947];
+% 
+% figure(4);
+%  bpcombine1=MLE;bpcombine2=GuidedFilter;bpcombine3=DWTmax;bpcombine4=NSCT;bpcombine5=Proposedmethod;
+% bpcombined = [bpcombine1(:), bpcombine2(:), bpcombine3(:),bpcombine4(:),bpcombine5(:)];
+% hb = bar(xdata, bpcombined, 'grouped')
+% xlabel('Data set number');ylabel('Metric Value');
+% title('SSIM');
+% legend('MLE','GuidedFilter','DWTmax','NSCT','Proposed Method');
+% 
+% 
+% MLE=[	4.02	4.34	4.72	6.27	4.06	4.42	3.68	4.03];
+%  GuidedFilter=[	3.15	2.87	3.55	3.38	3.3	3.59	2.86	2.76];
+% DWTmax	=[3.6098	3.4973	3.8306	4.5453	3.6506	3.9003	3.2859	3.6025];
+% NSCT=[	3.32	3.06	3.39	3.31	3.23	3.47	3.04	3.29];
+% Proposedmethod=[	5.1	5.57	6.06	6.83	5.62	5.84	4.67	5.01];
+% figure(5);
+%  bpcombine1=MLE;bpcombine2=GuidedFilter;bpcombine3=DWTmax;bpcombine4=NSCT;bpcombine5=Proposedmethod;
+% bpcombined = [bpcombine1(:), bpcombine2(:), bpcombine3(:),bpcombine4(:),bpcombine5(:)];
+% hb = bar(xdata, bpcombined, 'grouped')
+% xlabel('Data set number');ylabel('Metric Value');
+% title('Fusion Factor');
+% legend('MLE','GuidedFilter','DWTmax','NSCT','Proposed Method');
+% 
+% MLE	=[0.9669	0.9007	0.9359	1.0264	0.9129	0.9323	0.9268	0.9848];
+%  GuidedFilter=[ 0.736	0.581	0.6935	0.5473	0.7364	0.7466	0.7183	0.6838];
+% DWTmax	=[0.8683	0.7172	0.7415	0.7311	0.8259	0.8135	0.8306	0.8785];
+% NSCT	=[0.687	0.5871	0.6436	0.5469	0.6546	0.6845	0.6789	0.6911];
+% Proposedmethod	=[1.2587	1.1526	1.1933	1.0849	1.2626	1.2286	1.2247	1.2691];
+% figure(6);
+%  bpcombine1=MLE;bpcombine2=GuidedFilter;bpcombine3=DWTmax;bpcombine4=NSCT;bpcombine5=Proposedmethod;
+% bpcombined = [bpcombine1(:), bpcombine2(:), bpcombine3(:),bpcombine4(:),bpcombine5(:)];
+% hb = bar(xdata, bpcombined, 'grouped')
+% xlabel('Data set number');ylabel('Metric Value');
+% title('Normalized Mutual Information(QMI)');
+% legend('MLE','GuidedFilter','DWTmax','NSCT','Proposed Method');
